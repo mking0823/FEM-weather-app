@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Weather app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution{display:none;}
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+
+<body>
+  <div class="overflow">
+    <header class="container">
+    <img class="logo" src="./assets/images/logo.svg" alt="Weather Now ">
+    <div class="menu-container">
+    
+       <button id="units-btn"   class="btn box-shadow">
+             <img src="./assets/images/icon-units.svg" alt="Gear">
+             <span>Units</span>
+             <img src="./assets/images/icon-dropdown.svg" alt="">
+       </button>
+       <div id="units-box"  class="inactive units-container box-shadow">
+         <!-- This part may need to be a list -->
+         <h3> Switch to Imperial/Metric</h3>
+          <dl>
+             <dt>Temperature</dt>
+             <dd>Celsius (°C) <img src="./assets/images/icon-checkmark.svg" alt=""></dd>
+             <dd>Fahrenheit (°F)<img src="./assets/images/icon-checkmark.svg" alt=""></dd>
+             <dt> Wind Speed</dt>
+             <dd>km/h<img src="./assets/images/icon-checkmark.svg" alt=""></dd>
+             <dd>mph<img src="./assets/images/icon-checkmark.svg" alt=""></dd>
+             <dt>Precipitation</dt>
+             <dd>Millimeters (mm)<img src="./assets/images/icon-checkmark.svg" alt=""></dd>
+             <dd>Inches (in)<img src="./assets/images/icon-checkmark.svg" alt=""></dd>
+          </dl>
+       </div>
+      </div>
+    </header>
+    
+    
+    <section class="container">
+      
+      <h1>How's the sky looking today?</h1>
+      <form>
+        <label for="search-input">Search</label>
+        <input   id="search-input"type="text" name="Search"   class="search-input"  placeholder="Search for a city, e.g., New York">
+        <button  type="submit" class=" search-btn btn  box-shadow">Search</button>
+      </form>
+    </section>
+    <main class="container">
+      <div class="main-display  box-shadow">
+        <span class="city">Pittsburgh PA</span>
+        <span class="date">Monday Sept 8, 2025</span>
+        <div class="main-display-weather"><img src="./assets/images/icon-overcast.webp" alt="">
+          <span class="temp">20</span>
+        </div>
+        
+      </div>
+      <section class="day-container">
+        <div class="day-boxes">
+          <h4>Feels like </h4>
+         <span class="day-display">36°<!-- Insert temperature here --></span>
+        </div>
+        <div class="day-boxes">
+          <h4>Humidity</h4>
+         <span class="day-display">40%<!-- Insert humidity here --></span>
+         </div>
+        <div class="day-boxes">
+          <h4>Wind</h4>
+           <span class="day-display">15 mph<!-- Insert wind here --></span>
+        </div>
+        <div class="day-boxes">
+          <h4>Precipitation</h4>
+           <span class="day-display">0 in <!-- Insert precipitation here --></span>
+        </div>
+      </section>
+      Daily forecast
+      <!-- Insert daily forecast for the next 7 days here -->
+      Hourly forecast
+      <!-- Insert hourly forecast for the selected day here -->
+    
+  </main>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+</body>
+
+<script src="script.js"></script>
+
+</html>
