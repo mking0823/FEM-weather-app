@@ -4,7 +4,7 @@ const unitsBox = document.querySelector("#units-box");
 const url ="https://api.open-meteo.com/v1/forecast?latitude=40.4406&longitude=-79.9959&daily=temperature_2m_min,temperature_2m_max,weather_code&hourly=temperature_2m,weather_code&current=apparent_temperature,temperature_2m,relative_humidity_2m,wind_speed_10m,precipitation"
 
 
-const  dayDisplay = document.getElementsByClassName("current-display")
+const  currentDisplay = document.getElementsByClassName("current-display")
 
 
 
@@ -45,12 +45,12 @@ unitsBnt.onclick = ()=>{
     unitsBox.classList.toggle("inactive")
 }
 
-Array.from(dayDisplay).forEach((box, i)=>{
+Array.from(currentDisplay).forEach((box, i)=>{
 box.style.backgroundColor = "red"
  })
 
 function populateCurrent(data){
-  dayDisplayDisplay[4].innerText = `${data.current.temperature_2m} ${data.current_units.temperature_2m}`
+  currentDisplayDisplay[4].innerText = `${data.current.temperature_2m} ${data.current_units.temperature_2m}`
 }
 
 
