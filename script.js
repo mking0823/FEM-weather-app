@@ -51,7 +51,7 @@ Array.from(dayDisplay).forEach((i , b)=>{
  })
 
 function populateDaily(data){
-  mainDisplay[0].innertext =data.latitude
+  mainDisplay[0].innertext =data.latitude[0]
 }
 
 async function getWeatherData(url){
