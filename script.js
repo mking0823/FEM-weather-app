@@ -6,7 +6,6 @@ const url ="https://api.open-meteo.com/v1/forecast?latitude=40.4406&longitude=-7
 
 const  dayDisplay = document.getElementsByClassName("day-display")
 
-const mainDisplay = document.getElementsByClassName("main-display")
 
 
 const weatherCodes = {
@@ -46,17 +45,17 @@ unitsBnt.onclick = ()=>{
     unitsBox.classList.toggle("inactive")
 }
 
-Array.from(dayDisplay).forEach((i , b)=>{
-  
+Array.from(dayDisplay).forEach((box, i)=>{
+box.style.backgroundColor = "red"
  })
 
 function populateCurrent(data){
-  mainDisplay[3].innerText = `${data.current.temperature_2m} ${data.current_units.temperature_2m}`
+  dayDisplayDisplay[4].innerText = `${data.current.temperature_2m} ${data.current_units.temperature_2m}`
 }
 
 
 
-async function getWeatherData(url){
+/*async function getWeatherData(url){
   let promise = await fetch(url)
   let data = await promise.json()
              await  console.log(data.current.temperature_2m)
@@ -65,4 +64,4 @@ async function getWeatherData(url){
 }
 
 
-getWeatherData(url)
+getWeatherData(url)*/
