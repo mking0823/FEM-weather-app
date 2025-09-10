@@ -246,7 +246,7 @@ label{
     display: block;
 }
 
-.main-display{
+.main-display-box{
     width: 100%;
     background: url("./assets/images/bg-today-large.svg") no-repeat center/cover;;
     
@@ -257,7 +257,7 @@ label{
 }
 
 
-.main-display > *{
+.main-display-box > *{
     display: block;
 }
 
