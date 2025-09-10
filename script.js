@@ -3,7 +3,7 @@ const unitsBnt = document.querySelector("#units-btn");
 const unitsBox = document.querySelector("#units-box");
 const url ="https://api.open-meteo.com/v1/forecast?latitude=40.4406&longitude=-79.9959&daily=temperature_2m_min,temperature_2m_max,weather_code&hourly=temperature_2m,weather_code&current=apparent_temperature,temperature_2m,relative_humidity_2m,wind_speed_10m,precipitation"
 
-
+//test
 const  currentDisplay = document.getElementsByClassName("current-display")
 
 
