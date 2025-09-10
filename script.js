@@ -6,7 +6,7 @@ const url ="https://api.open-meteo.com/v1/forecast?latitude=40.4406&longitude=-7
 
 const  dayDisplay = document.getElementsByClassName("day-display")
 
-
+const mainDisplay = document.getElementsByClassName("main-display")
 
 
 const weatherCodes = {
@@ -50,7 +50,9 @@ Array.from(dayDisplay).forEach((i , b)=>{
     
  })
 
-function populateDaily(data)
+function populateDaily(data){
+  mainDisplay[0].innertext =data
+}
 
 async function getWeatherData(url){
   let promise = await fetch(url)
