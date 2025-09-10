@@ -44,10 +44,17 @@ const weatherCodes = {
 unitsBnt.onclick = ()=>{
     unitsBox.classList.toggle("inactive")
 }
-
+function dayHiLoDissplay
 Array.from(currentDisplay).forEach((box, i)=>{
 box.style.backgroundColor = "red"
  })
+
+
+
+
+
+
+
 
 function populateCurrent(data){
   currentDisplayDisplay[4].innerText = `${data.current.temperature_2m} ${data.current_units.temperature_2m}`
