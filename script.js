@@ -47,9 +47,14 @@ unitsBnt.onclick = ()=>{
 }
 
 Array.from(dayDisplay).forEach((i , b)=>{
-    console.log(i);
-    console.log(b)
+    
  })
 
+function populateDaily(data)
 
-
+async function getWeatherData(url){
+  let promise = await fetch(url)
+  let data = await promise.json()
+             await  console.log(data)
+}
+getWeatherData(url)
