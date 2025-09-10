@@ -261,7 +261,7 @@ label{
     display: block;
 }
 
-.day-display{
+.current-display{
    color:var(--Neutral-0);
    font-size: 2rem;
 }
