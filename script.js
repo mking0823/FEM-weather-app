@@ -51,7 +51,7 @@ Array.from(dayDisplay).forEach((i , b)=>{
  })
 
 function populateDaily(data){
-  mainDisplay[3].innerText = data.current.temperature_2m
+  mainDisplay[3].innerText = `${data.current.temperature_2m} ${data.current_units.temperature_2m}`
 }
 
 
@@ -59,7 +59,10 @@ function populateDaily(data){
 async function getWeatherData(url){
   let promise = await fetch(url)
   let data = await promise.json()
-             await  console.log(data.curren.temperature_2m)
+             await  console.log(data.current.temperature_2m)
              await populateDaily(data)
+            await console.log("fin")
 }
+
+
 getWeatherData(url)
