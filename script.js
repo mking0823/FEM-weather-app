@@ -47,7 +47,7 @@ unitsBnt.onclick = ()=>{
 }
 
 Array.from(dayDisplay).forEach((i , b)=>{
-    
+  
  })
 
 function populateCurrent(data){
