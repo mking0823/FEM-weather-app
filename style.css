@@ -20,7 +20,7 @@
     box-sizing: border-box;
 }
 
-.box-shadow,.day-boxes{
+.box-shadow,.current-box{
   box-shadow: 0 8px 16px 0 rgba(2, 1, 44, 0.32);
 
 }
@@ -60,7 +60,7 @@ header{
 /* Grid Layouts */
 
 
-.day-container{
+.current-container{
  
  display: grid;
  grid-template-columns: repeat(2,1fr);
@@ -137,7 +137,7 @@ margin:0 auto;
     
 }
 
-.day-boxes{
+.current-box{
     background-color: var(--Neutral-600);
     padding: 1.25rem;
     border-radius:12px ;
@@ -246,7 +246,7 @@ label{
     display: block;
 }
 
-.main-display-box{
+.main-display{
     width: 100%;
     background: url("./assets/images/bg-today-large.svg") no-repeat center/cover;;
     
@@ -257,11 +257,11 @@ label{
 }
 
 
-.main-display-box > *{
+.main-display > *{
     display: block;
 }
 
-.current-display{
+.day-display{
    color:var(--Neutral-0);
    font-size: 2rem;
 }

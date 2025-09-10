@@ -46,7 +46,7 @@ unitsBnt.onclick = ()=>{
 }
 function dayHiLoDissplay
 Array.from(currentDisplay).forEach((box, i)=>{
-box.style.backgroundColor = "red"
+  box.style.backgroundColor = "red"
  })
 
 
