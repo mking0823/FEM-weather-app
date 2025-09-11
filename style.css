@@ -109,32 +109,30 @@ margin:0 auto;
     font-weight: 500;
     line-height: 120%;
     background: var(--Neutral-800);
-    color: white;
+    color: var(--Neutral-0);
     gap:5px;
     border:none;
     border-radius:12px;
     ;
 }
 
+.hourly-btn{
+  background-color: var(--Neutral-400);
+}
 .menu-container{
     position: relative;
    
 }
 .units-container{
-     
-      
     min-width:275px; 
     width: max-content;
     background-color:var(--Neutral-700) ;
-    color: white;
+    color: var(--Neutral-0);
     position:absolute;
     top:3rem;
     right:0;
     padding: 1em;
     border-radius: 12px;
-   
-    
-    
 }
 
 .current-box{
