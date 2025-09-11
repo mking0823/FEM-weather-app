@@ -84,29 +84,6 @@ header{
 
 
 
-main{
-    display: grid;
-    grid-template-rows:4fr 1fr;
-}
-
-
-.hourly-display-container{
-    grid-template-columns: 2 -1;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ----------------------- */
 
 
 
@@ -379,5 +356,32 @@ form{
         display:flex;
         justify-content:space-between;
     }
-    
+    main{
+    align-items: stretch;
+    justify-content: stretch;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap:2rem
+}
+
+.current-container{
+    grid-column: 1 / 2;
+}
+
+.main-container{
+    grid-row: 1 / 2 ;
+}
+.day-display-conainer{
+    grid-column: 1/ 2
+}
+
+.hourly-display-container{
+   grid-column: 2 / 3;
+   grid-row: 1 / 5;
+}
+
+
+
+/* ----------------------- */
+
 }
