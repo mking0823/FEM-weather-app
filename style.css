@@ -69,7 +69,7 @@ header{
  gap:1em;
 }
 
-.day-display-conainer{
+.day-display-container{
         
          display:grid;
          grid-template-columns: repeat(3,1fr);
@@ -345,7 +345,7 @@ form{
     margin: 0 auto;
     justify-content: center;
 }
-.day-display-conainer{
+.day-display-container{
     display: flex;
     justify-content: space-between;
     
@@ -371,7 +371,7 @@ form{
 .main-container{
     grid-row: 1 / 2 ;
 }
-.day-display-conainer{
+.day-display-container{
     grid-column: 1/ 2
 }
 
