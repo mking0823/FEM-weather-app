@@ -6,7 +6,7 @@ const url ="https://api.open-meteo.com/v1/forecast?latitude=40.4406&longitude=-7
 //test
 const  currentDisplay = document.getElementsByClassName("current-display")
 
-
+const dayDisplay =document.getWeatherData("day-display")
 
 const weatherCodes = {
   0: "Clear sky",
