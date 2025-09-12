@@ -59,166 +59,47 @@
         <button  type="submit" class=" search-btn btn  box-shadow">Search</button>
       </form>
     </section>
-    <main class="container">
-      <div class="main-display-box  box-shadow">
-        <span class="city current-display">Pittsburgh PA</span>
-        <span class="date current-display">Monday Sept 8, 2025</span>
-        <div class="main-display"><img  class= "current-display"src="./assets/images/icon-overcast.webp" alt="">
-          <span class="temp current-display">20</span>
+    <main class="container grid-wrapper--main">
+      <section class="grid-child  grid-child--main grid-child--main_hero">
+      </section>
+      <section class="grid-child grid-child--main grid-child--main_current grid-wrapper--current">
+        <article class="grid-child grid-child--current"></article>
+        <article class="grid-child grid-child--current"></article>
+        <article class="grid-child grid-child--current"></article>
+        <article class="grid-child grid-child--current"></article>
+      </section>
+      <section class="grid-child grid-child--main grid-child--main_daily ">
+       <h2>Daily Forcast</h2>
+        <div class="grid-wrapper--daily">
+          <article class="grid-child grid-child--daily"></article>
+          <article class="grid-child grid-child--daily"></article>
+          <article class="grid-child grid-child--daily"></article>
+          <article class="grid-child grid-child--daily"></article>
+          <article class="grid-child grid-child--daily"></article>
+          <article class="grid-child grid-child--daily"></article>
+          <article class="grid-child grid-child--daily"></article>
         </div>
         
-      </div>
-      <section class="current-container">
-        <div class="box-shadow current-box">
-          <h4>Feels like </h4>
-         <span class="current-display">36°<!-- Insert temperature here --></span>
-        </div>
-        <div class="box-shadow current-box">
-          <h4>Humidity</h4>
-         <span class="current-display">40%<!-- Insert humidity here --></span>
-         </div>
-        <div class="box-shadow current-box">
-          <h4>Wind</h4>
-           <span class="current-display">15 mph<!-- Insert wind here --></span>
-        </div>
-        <div class="box-shadow current-box">
-          <h4>Precipitation</h4>
-          <span class="current-display">0 in <!-- Insert precipitation here --></span>
-        </div>
       </section>
-      <!-- Insert daily forecast for the next 7 days here -->
-      <h2>Daily forecast</h2>
-     <section class="day-display-container">
-        <div class="box-shadow day-display-box">
-          <span class="day-display">Mon</span>
-          <img src="./assets/images/icon-overcast.webp" alt="" class="day-display">
-          <div class="hi-lo-flex">
-            <span class="day-display">55</span>
-            <span class="day-display">55</span>
+      <section class="grid-child grid-child--main grid-child--main_hourly">
+            <h2>Hourly Forcast</h2>
+            <button class="btn">Monday</button>
+            <div class="grid-wrapper--hourly">
+            <article class="grid-child grid-child--hourly"></article>
+            <article class="grid-child grid-child--hourly"></article>
+            <article class="grid-child grid-child--hourly"></article>
+            <article class="grid-child grid-child--hourly"></article>
+            <article class="grid-child grid-child--hourly"></article>
+            <article class="grid-child grid-child--hourly"></article>
+            <article class="grid-child grid-child--hourly"></article>
+            <article class="grid-child grid-child--hourly"></article>
           </div>
-        </div>
-        <div class="box-shadow day-display-box">
-                <span class="day-display">Tue</span>
-                <img src="./assets/images/icon-overcast.webp" alt="" class="day-display">
-               <div class="hi-lo-flex">
-                 <span class="day-display">44</span>
-                 <span class="day-display">44</span>
-               </div>
-        </div> 
-        <div class="box-shadow day-display-box">
-              <span class="day-display">Wed</span>
-               <img src="./assets/images/icon-overcast.webp" alt="" class="day-display">
-              <div class="hi-lo-flex">
-                <span class="day-display">33</span>
-                <span class="day-display">33</span>
-              </div>
-            </div>
-        <div class="box-shadow day-display-box">
-              <span class="day-display">Thu</span>
-                <img src="./assets/images/icon-overcast.webp" alt="" class="day-display">
-              <div class="hi-lo-flex">
-                <span class="day-display">22</span>
-                <span class="day-display">22</span>
-              </div>
-        </div> 
-        <div class="box-shadow day-display-box">
-              <span class="day-display">Fri</span>
-                <img src="./assets/images/icon-overcast.webp" alt="" class="day-display">
-              <div class="hi-lo-flex">
-                <span class="day-display">11</span>
-                <span class="day-display">11</span>
-              </div>
-        </div> 
-        <div class="box-shadow day-display-box">
-              <span class="day-display">sat</span>
-                <img src="./assets/images/icon-overcast.webp" alt="" class="day-display">
-              <div class="hi-lo-flex">
-                <span class="day-display">00</span>
-                <span class="day-display">00</span>
-              </div>
-        </div> 
-        <div class="box-shadow day-display-box">
-              <span class="day-display">sun</span>
-               <img src="./assets/images/icon-overcast.webp" alt="" class="day-display">
-              <div class="hi-lo-flex">
-                <span class="day-display">55</span>
-                <span class="day-display">66</span>
-              </div>
-        </div>
-       
-     </section>
-
-     <!-- Insert hourly forecast for the selected day here -->
-      <section class="box-shadow hourly-display-container">
-        <div class="hourly-menu-box">
-          <h2>Hourly forecast</h2>
-          <button class="hourly-btn box-shadow btn">Monday<img src="./assets/images/icon-dropdown.svg" alt=""></button>
-        </div>
-        <div class="hourly-display-box">
-          <div>
-              <img src="./assets/images/icon-drizzle.webp" alt="">
-              <span class="hourly-display">ti</span>
-            </div>
-              <span class="hourly-display">te</span>
-            </div>
-            <div class="hourly-display-box">
-          <div>
-              <img src="./assets/images/icon-drizzle.webp" alt="">
-              <span class="hourly-display">ti</span>
-            </div>
-              <span class="hourly-display">te</span>
-            </div>
-            <div class="hourly-display-box">
-          <div>
-              <img src="./assets/images/icon-drizzle.webp" alt="">
-              <span class="hourly-display">ti</span>
-            </div>
-              <span class="hourly-display">te</span>
-            </div>
-            <div class="hourly-display-box">
-          <div>
-              <img src="./assets/images/icon-drizzle.webp" alt="">
-              <span class="hourly-display">ti</span>
-            </div>
-              <span class="hourly-display">te</span>
-            </div>
-            <div class="hourly-display-box">
-          <div>
-              <img src="./assets/images/icon-drizzle.webp" alt="">
-              <span class="hourly-display">ti</span>
-            </div>
-              <span class="hourly-display">te</span>
-            </div>
-            <div class="hourly-display-box">
-          <div>
-              <img src="./assets/images/icon-drizzle.webp" alt="">
-              <span class="hourly-display">ti</span>
-            </div>
-              <span class="hourly-display">te</span>
-            </div>
-            <div class="hourly-display-box">
-          <div>
-              <img src="./assets/images/icon-drizzle.webp" alt="">
-              <span class="hourly-display">ti</span>
-            </div>
-              <span class="hourly-display">te</span>
-            </div>
-            <div class="hourly-display-box">
-          <div>
-              <img src="./assets/images/icon-drizzle.webp" alt="">
-              <span class="hourly-display">ti</span>
-            </div>
-              <span class="hourly-display">te</span>
-            </div>
-           
-    
       </section>
-    
   </main>
-    <div class="attribution">
+    <section class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
       Coded by <a href="#">Your Name Here</a>.
-    </div>
+    </section>
 </body>
 
 <script src="script.js"></script>

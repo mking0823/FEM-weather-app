@@ -4,9 +4,19 @@ const unitsBox = document.querySelector("#units-box");
 const url ="https://api.open-meteo.com/v1/forecast?latitude=40.4406&longitude=-79.9959&daily=temperature_2m_min,temperature_2m_max,weather_code&hourly=temperature_2m,weather_code&current=apparent_temperature,temperature_2m,relative_humidity_2m,wind_speed_10m,precipitation"
 
 //test
-const  currentDisplay = document.getElementsByClassName("current-display")
 
-const dayDisplay =document.getWeatherData("day-display")
+const heroDisplay =    document.querySelectorAll(".grid-child--main_hero")
+
+const currentDisplay = document.querySelectorAll(".grid-child--current")
+
+const dailyDisplay =   document.querySelectorAll(".grid-child--daily")
+
+const hourlyDisplay =  document.querySelectorAll(".grid-child--hourly")
+
+
+
+
+
 
 const weatherCodes = {
   0: "Clear sky",
@@ -44,9 +54,12 @@ const weatherCodes = {
 unitsBnt.onclick = ()=>{
     unitsBox.classList.toggle("inactive")
 }
-function dayHiLoDissplay
-Array.from(currentDisplay).forEach((box, i)=>{
-  box.style.backgroundColor = "red"
+ 
+
+
+
+heroDisplay.forEach((box, i)=>{
+  box.style.background = "red"
  })
 
 
