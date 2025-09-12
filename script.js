@@ -58,7 +58,7 @@ unitsBnt.onclick = ()=>{
 
 
 
-heroDisplay.forEach((box, i)=>{
+/*heroDisplay.forEach((box, i)=>{
   box.style.background = "red"
  })
 

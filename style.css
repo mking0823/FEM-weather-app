@@ -147,6 +147,11 @@ height:100%
     ;
 }
 
+main{
+    color:var(--Neutral-0)
+}
+
+
 .hourly-btn{
   background-color: var(--Neutral-500);
 }
@@ -252,9 +257,9 @@ label{
 
 .grid-child--main_hero{
      
-    background: url("./assets/images/bg-today-large.svg") no-repeat center/cover;;
+    background: url("./assets/images/./bg-today-small.svg") no-repeat center/cover;
     overflow: hidden;
-    padding:3em;
+ 
    
 }
 
@@ -265,10 +270,74 @@ label{
  
 
 .grid-child img{
-    display: block;
+    
    max-width: 50%;
    height: auto;
-   margin: 0 auto;
+    
+}
+
+/* Hero Stylying */
+
+.hero-content{
+    width: 98%;
+    height: 100%;
+    margin: 0 auto;
+    padding:1em;
+     
+}
+.hero-temp--wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h3{
+    font-size: 1.75em;
+    margin-bottom: .5em;
+}
+.hero-date,
+h3{
+    text-align: center;
+}
+
+.hero-date{
+font-size: 1.125rem ;
+ display: block;
+}
+
+.hero-img{
+    
+    display:inline-block;
+    width:50%;
+    
+}
+
+.hero-temp{
+    font-size:6rem
+}
+
+
+/* ---current styling---- */
+
+
+.current-content{
+    width: 75%;
+    height: 100%;
+    align-content: center;
+    margin:0 auto;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+h4{
+    color: var(--Neutral-200);
+    font-size: 1.125rem;
+    margin-bottom: 1em;
+    font-weight: 400;
+
+}
+.current-data{
+    font-size: 2rem;
 }
 
 
@@ -276,14 +345,101 @@ label{
 
 
 
+/* ------- */
+
+
+
+
+/* Daily Styling */
+
+
+.daily-content{
+    margin-top: .5em;
+    margin-bottom: .5em;
+    text-align: center;
+    justify-items: center;
+    width: 98%;
+    height: 100%;
+}
+
+.daily-temp--wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size:1rem;
+    width:100%;
+}
 
 
 
 
 
 
+/* ----------- */
 
 
+/* Hourly Styling */
+
+
+.hourly-content{
+    width: 90%;
+    margin:1em auto;
+
+}
+
+.hourly-head-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.hourly-btn{
+    background-color: var(--Neutral-600);
+}
+
+
+.grid-wrapper--hourly{
+  gap:1rem;
+  min-height:50px
+}
+
+.hourly-img{
+   object-fit: contain;
+   width:100%;
+   height: 100%;
+   
+}
+.hourly-flex-wrapper, .hourly-flex-wrapper > div{
+    display: flex;
+    align-items: center;
+    height:100%;
+    
+}
+
+.hourly-flex-wrapper{
+    width: 90%;
+    margin: 1rem;
+    justify-content: space-between;
+}
+
+
+
+.hourly-time{
+    margin-right: auto;
+    display: block;
+}
+
+.hourly-img-container{
+  width: 50%;
+  display: inline-block;
+}
+.hourly-wrapper{
+    min-height: 0;
+}
+
+
+/* ----------------- */
 
 
 @media (min-width:35rem){
@@ -293,35 +449,59 @@ form{
     margin: 0 auto;
     justify-content: center;
 }
-    
 .grid-wrapper--current,
 .grid-wrapper--daily{
     display: flex;
     justify-content:space-between;
     align-items: stretch;
 }
-
+}
 body{
-   background-color: yellow;
+    background-color: yellow;
 }
-}
-
 
 
 @media (min-width:56rem) {  /*900px*/
     .grid-wrapper--main{
-     display: grid;
-     grid-template-columns: 3fr 1fr;
-     grid-template-rows: 2fr 1fr 1fr;}
-    
-     .grid-child--main_hourly{
-     grid-row: 1 / 4;
-     grid-column: 2/ 3;
-   }
-body{
-    background-color: red;
-}
-   
-/* ----------------------- */
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 3fr 1fr 2fr;}
+        
+        .grid-child--main_hourly{
+            grid-row: 1 / 4;
+            grid-column: 2/ 3;
+        }
+        body{
+             
+            background-color: red;
+        }
+        
+        /* ----------------------- */
+    }
 
+
+@media (min-width:75rem){
+    .grid-child--main_hero{
+     
+    background: url("./assets/images/bg-today-large.svg") no-repeat center/cover;
+}
+
+    .hero-content{
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .hero-temp--wrapper{
+        
+        justify-content: flex-end;
+        
+    
+}
+}
+    @media (min-width:90.01rem){
+    body{
+        font-size: 140%;
+      background-color: green;
+    }
 }

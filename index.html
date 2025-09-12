@@ -61,9 +61,24 @@
     </section>
     <main class="container grid-wrapper--main">
       <section class="grid-child  grid-child--main grid-child--main_hero">
+        <article class="hero-content">
+          <div>
+            <h3 class="hero-location hero-data">Pitssburgh PA</h3>
+            <span class="hero-date hero-data">Tuesday, Sept 11, 2025</span>
+          </div>
+          <div class="hero-temp--wrapper">
+            <img src="./assets/images/icon-fog.webp" alt="" class="hero-img hero-data">
+            <span class="hero-temp hero-data">90°</span>
+          </div>
+        </article>
       </section>
       <section class="grid-child grid-child--main grid-child--main_current grid-wrapper--current">
-        <article class="grid-child grid-child--current"></article>
+        <article class="grid-child grid-child--current">
+          <div class="current-content">
+            <h4 class="current-label current-data">Feels Like</h4>
+            <span class="current-value current-data">98°</span>
+          </div>
+        </article>
         <article class="grid-child grid-child--current"></article>
         <article class="grid-child grid-child--current"></article>
         <article class="grid-child grid-child--current"></article>
@@ -71,7 +86,16 @@
       <section class="grid-child grid-child--main grid-child--main_daily ">
        <h2>Daily Forcast</h2>
         <div class="grid-wrapper--daily">
-          <article class="grid-child grid-child--daily"></article>
+          <article class="grid-child grid-child--daily">
+            <div class="daily-content">
+              <h5 class="daily-date daily-data">Tue</h5>
+              <img src="./assets/images/icon-drizzle.webp" alt="">
+              <div class="daily-temp--wrapper">
+                <span class="daily-temp daily-data">90°</span>
+                <span class="daily-temp daily-data">90°</span>
+              </div>
+            </div>
+          </article>
           <article class="grid-child grid-child--daily"></article>
           <article class="grid-child grid-child--daily"></article>
           <article class="grid-child grid-child--daily"></article>
@@ -82,18 +106,30 @@
         
       </section>
       <section class="grid-child grid-child--main grid-child--main_hourly">
-            <h2>Hourly Forcast</h2>
-            <button class="btn">Monday</button>
-            <div class="grid-wrapper--hourly">
-            <article class="grid-child grid-child--hourly"></article>
-            <article class="grid-child grid-child--hourly"></article>
-            <article class="grid-child grid-child--hourly"></article>
-            <article class="grid-child grid-child--hourly"></article>
-            <article class="grid-child grid-child--hourly"></article>
-            <article class="grid-child grid-child--hourly"></article>
-            <article class="grid-child grid-child--hourly"></article>
-            <article class="grid-child grid-child--hourly"></article>
-          </div>
+            <div class="hourly-content">
+                <div class="hourly-head-wrapper">
+                  <h2>Hourly Forcast</h2>
+                  <button class="btn hourly-btn">Monday</button>
+                </div>
+                <div class="grid-wrapper--hourly">
+                <article class="grid-child grid-child--hourly hourly-wrapper">
+                  <div class="hourly-flex-wrapper">
+                    <div>
+                      <div class="hourly-img-container"><img class="hourly-img hourly-data " src="./assets/images/icon-drizzle.webp" alt=""></div>
+                      <span class="hourly-time hourly-">4 PM</span>
+                    </div>
+                    <span class="hourly-temp hourly-data">90°</span>
+                  </div>
+                </article>
+                <article class="grid-child grid-child--hourly"></article>
+                <article class="grid-child grid-child--hourly"></article>
+                <article class="grid-child grid-child--hourly"></article>
+                <article class="grid-child grid-child--hourly"></article>
+                <article class="grid-child grid-child--hourly"></article>
+                <article class="grid-child grid-child--hourly"></article>
+                <article class="grid-child grid-child--hourly"></article>
+                </div>
+            </div>
       </section>
   </main>
     <section class="attribution">
