@@ -1,5 +1,5 @@
 const date = new Date();
-let  output = date.toString
+let  output = date.toDateString()
 
 console.log(output)
 
