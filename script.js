@@ -108,7 +108,10 @@ function getDailyData(data){
  })
 
 }
-
+function getDays(currentDate){
+  for(let x = 0 , x< 7 ,x++){
+  console.log(currentDate.setDate(currentDate.getDate() + 1);)
+}
 
    //box.insertAdjacentHTML("beforeend",hourlyContent)
  
