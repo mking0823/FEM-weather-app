@@ -1,13 +1,13 @@
 const unitsBnt = document.querySelector("#units-btn");
 
 const unitsBox = document.querySelector("#units-box");
-const url ="https://api.open-meteo.com/v1/forecast?latitude=40.4406&longitude=-79.9959&daily=temperature_2m_min,temperature_2m_max,weather_code&hourly=temperature_2m,weather_code&current=apparent_temperature,temperature_2m,relative_humidity_2m,wind_speed_10m,precipitation"
+const url ="https://api.open-meteo.com/v1/forecast?latitude=40.4406&longitude=-79.9959&daily=weather_code,temperature_2m_max,temperature_2m_min&hourly=temperature_2m,weather_code&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m,relative_humidity_2m,precipitation&timezone=America%2FNew_York&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch"
 
 //test
 
 const heroDisplay =    document.querySelectorAll(".grid-child--main_hero")
 
-const currentDisplay = document.querySelectorAll(".grid-child--current")
+const currentDisplay = document.querySelectorAll(".current-data")
 
 const dailyDisplay =   document.querySelectorAll(".grid-child--daily")
 
@@ -54,34 +54,81 @@ const weatherCodes = {
 unitsBnt.onclick = ()=>{
     unitsBox.classList.toggle("inactive")
 }
+
+const hourlyContent =`
+<div class="hourly-flex-wrapper">
+<div>
+<div class="hourly-img-container"><img class="hourly-img hourly-data " src="./assets/images/icon-drizzle.webp" alt=""></div>
+<span class="hourly-time hourly-">4 PM</span>
+</div>
+<span class="hourly-temp hourly-data">90°</span>
+</div>`
+
+function getCurrentData(data){
+  currentDisplay[0].innerText = `${data.current.apparent_temperature}°`
+   currentDisplay[1].innerText = `${data.current.relative_humidity_2m}%`
+   currentDisplay[2].innerText = `${data.current.wind_speed_10m} ${data.current_units.wind_speed_10m} `
+   currentDisplay[3].innerText = `${data.current.precipitation} ${getUnits(data.current_units.precipitation)} `
+
+}
+
+
+function getUnits(unit){
+  if (unit == "inch"){
+    return "in"
+  }
+  else{
+    return "mm"
+  }
+}
+
+
+
+const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+//dailyDisplay[1].insertAdjacentHTML("beforeend",dailyContent) 
+function getDailyData(data){
+ 
+
+    dailyDisplay.forEach((box, i)=>{
+   
+   dailyDisplay[i].insertAdjacentHTML("beforeend", 
+                     `<div class="daily-content">
+                      <h5 class="daily-date daily-data">Tue</h5>
+                      <img src="./assets/images/icon-drizzle.webp" alt="">
+                      <div class="daily-temp--wrapper">
+                     <span class="daily-temp daily-data">${Math.round(data.daily.temperature_2m_max[i])}°</span>
+                    <span class="daily-temp daily-data">${Math.round(data.daily.temperature_2m_min[i])}°</span>
+                    </div>`) 
+ })
+
+}
+
+
+   //box.insertAdjacentHTML("beforeend",hourlyContent)
  
 
 
 
-/*heroDisplay.forEach((box, i)=>{
-  box.style.background = "red"
- })
+
+
+// function populateCurrent(data){
+//   currentDisplayDisplay[4].innerText = `${data.current.temperature_2m} ${data.current_units.temperature_2m}`
+// }
+      
+    
 
 
 
-
-
-
-
-
-function populateCurrent(data){
-  currentDisplayDisplay[4].innerText = `${data.current.temperature_2m} ${data.current_units.temperature_2m}`
-}
-
-
-
-/*async function getWeatherData(url){
+async function getWeatherData(url){
   let promise = await fetch(url)
   let data = await promise.json()
-             await  console.log(data.current.temperature_2m)
-             await populateCurrent(data)
-            await console.log("fin")
+             await  console.log(data)
+             await  getDailyData(data)
+             await  getCurrentData(data)
+             await  console.log(daysOfWeek[new Date(`${data.daily.time[0]}).getDay()])
+             
 }
 
 
-getWeatherData(url)*/
+getWeatherData(url)

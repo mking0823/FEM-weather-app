@@ -76,11 +76,15 @@ height:100%
 
 
 .grid-child{
-   min-height: 100px;
+   /* min-height: 100px; */
    box-shadow: 0 8px 16px 0 rgba(2, 1, 44, 0.32);
    border-radius: 16px;
 }
 
+
+.grid-child--main_current,.grid-child--main_daily{
+    box-shadow: none;
+}
 
 .grid-wrapper--current{
       /* display: grid;
@@ -368,12 +372,16 @@ h4{
     justify-content: space-around;
     font-size:1rem;
     width:100%;
+    font-size: 2rem;
 }
 
+.daily-content img{
+    max-width: 52%;;
+}
 
-
-
-
+h2{
+    margin-bottom: 2rem;
+}
 
 /* ----------- */
 
@@ -401,7 +409,7 @@ h4{
 
 .grid-wrapper--hourly{
   gap:1rem;
-  min-height:50px
+   min-height:0;
 }
 
 .hourly-img{
@@ -431,7 +439,7 @@ h4{
 }
 
 .hourly-img-container{
-  width: 50%;
+  width: 25%;
   display: inline-block;
 }
 .hourly-wrapper{
@@ -457,7 +465,7 @@ form{
 }
 }
 body{
-    background-color: yellow;
+    /* background-color: yellow; */
 }
 
 
@@ -473,7 +481,7 @@ body{
         }
         body{
              
-            background-color: red;
+            /* background-color: red; */
         }
         
         /* ----------------------- */
@@ -502,6 +510,6 @@ body{
     @media (min-width:90.01rem){
     body{
         font-size: 140%;
-      background-color: green;
+      /* background-color: green; */
     }
 }
