@@ -3,7 +3,7 @@ let  output = date.toString
 
 console.log(output)
 
-const unitsBnt = document.querySelector("#units-btn");
+/*const unitsBnt = document.querySelector("#units-btn");
 
 const unitsBox = document.querySelector("#units-box");
 const url ="https://api.open-meteo.com/v1/forecast?latitude=40.4406&longitude=-79.9959&daily=weather_code,temperature_2m_max,temperature_2m_min&hourly=temperature_2m,weather_code&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m,relative_humidity_2m,precipitation&timezone=America%2FNew_York&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch"
@@ -136,4 +136,4 @@ async function getWeatherData(url){
 }
 
 
-getWeatherData(url)
+getWeatherData(url) */
