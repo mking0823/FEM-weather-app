@@ -109,8 +109,12 @@ function getDailyData(data){
 
 }
 function getDays(currentDate){
-  for(let x = 0 , x< 7 ,x++){
-  console.log(currentDate.setDate(currentDate.getDate() + 1);)
+  const dayOfWeek = document.querySelectorAll(".daily-date")
+  for(let i = 0 ; i< 7 ; i++){
+  currentDate.setDate(currentDate.getDate() + 1);
+  console.log(currentDate.toString())
+   dayOfWeek[i].innerText = currentDate.strip(1,3)
+}
 }
 
    //box.insertAdjacentHTML("beforeend",hourlyContent)
@@ -137,9 +141,9 @@ async function getWeatherData(url){
              let  currentDate =  await (new Date(data.daily.time[0]));
              await console.log(currentDate);
              let newTime =  await currentDate.setMinutes(currentDate.getMinutes() + 240);
-             await  console.log(currentDate.toString)
+             await getDays(currentDate)
              
 }
 
 
-getWeatherData(url) 
+getWeatherData(url)
