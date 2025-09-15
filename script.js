@@ -1,3 +1,8 @@
+const date = new Date();
+let  output = date.toString
+
+console.log(output)
+
 const unitsBnt = document.querySelector("#units-btn");
 
 const unitsBox = document.querySelector("#units-box");
