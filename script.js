@@ -134,7 +134,7 @@ async function getWeatherData(url){
              let  currentDate =  await (new Date(data.daily.time[0]));
              await console.log(currentDate);
              let newTime =  await currentDate.setMinutes(currentDate.getMinutes() + 240);
-             await  console.log(currentDate)
+             await  console.log(currentDate.toString)
              
 }
 
