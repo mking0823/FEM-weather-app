@@ -110,10 +110,12 @@ function getDailyData(data){
 }
 function getDays(currentDate){
   const dayOfWeek = document.querySelectorAll(".daily-date")
+  let day 
   for(let i = 0 ; i< 7 ; i++){
   currentDate.setDate(currentDate.getDate() + 1);
-  console.log(currentDate.toString())
-   dayOfWeek[i].innerText = currentDate.strip(1,3)
+day =  currentDate.toDateString()
+console.log(day.strip(0,3))
+  dayOfWeek[i].innerText = day.strip(0,3)
 }
 }
 
