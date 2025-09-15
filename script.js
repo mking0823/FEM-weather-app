@@ -89,7 +89,7 @@ function getUnits(unit){
 
 
 
-const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+//const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 //dailyDisplay[1].insertAdjacentHTML("beforeend",dailyContent) 
 function getDailyData(data){
@@ -109,12 +109,14 @@ function getDailyData(data){
 
 }
 function getDays(currentDate){
-  const dayOfWeek = document.querySelectorAll(".daily-date")
-  let day 
-  for(let i = 0 ; i< 7 ; i++){
+  const dayOfWeek = document.querySelectorAll(".daily-date");
+  dayOfWeek[0].innerText = currentDate.toDateString().slice(0,3)
+  let day  
+  for(let i = 1 ; i< 7 ; i++){
   currentDate.setDate(currentDate.getDate() + 1);
-day =  currentDate.toDateString()
-console.log(day.slice(1,3))
+  day =  currentDate.toDateString()
+   console.log(day.slice(1,3))
+   console.log(currentDate)
   dayOfWeek[i].innerText = day.slice(0,3)
 }
 }
@@ -141,7 +143,7 @@ async function getWeatherData(url){
              await  getDailyData(data)
              await  getCurrentData(data)
              let  currentDate =  await (new Date(data.daily.time[0]));
-             await console.log(currentDate);
+             await console.log(data);
              let newTime =  await currentDate.setMinutes(currentDate.getMinutes() + 240);
              await getDays(currentDate)
              
