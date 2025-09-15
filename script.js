@@ -114,8 +114,8 @@ function getDays(currentDate){
   for(let i = 0 ; i< 7 ; i++){
   currentDate.setDate(currentDate.getDate() + 1);
 day =  currentDate.toDateString()
-console.log(day.strip(0,3))
-  dayOfWeek[i].innerText = day.strip(0,3)
+console.log(day.slice(1,3))
+  dayOfWeek[i].innerText = day.slice(0,3)
 }
 }
 
