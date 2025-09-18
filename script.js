@@ -19,7 +19,9 @@ const dailyDisplay =   document.querySelectorAll(".grid-child--daily")
 const hourlyDisplay =  document.querySelectorAll(".grid-child--hourly")
 
 
-
+function getweatherCodes(data){
+  console.log(weatherCodes[data.daily.weather_code[2]])
+}
 
 
 
@@ -146,7 +148,7 @@ async function getWeatherData(url){
              await console.log(data);
              let newTime =  await currentDate.setMinutes(currentDate.getMinutes() + 240);
              await getDays(currentDate)
-             
+             await getweatherCodes(data)
 }
 
 
